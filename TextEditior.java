@@ -19,9 +19,10 @@ public class TextEditior implements ActionListener {
 
         menubar = new JMenuBar();                       // Creating a menubar
 
-        frame.setTitle("Text Editior");
+        frame.setTitle("Text Editior");                 // Creating a Icon Image Class
         Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\ANKITMAURYA\\IdeaProjects\\TEXT_EDITIOR\\icon.png");
-        frame.setIconImage(icon);
+        frame.setIconImage(icon);                       // Set the Icon Into Frame
+        
         textArea = new JTextArea();                     // Creating a text Area
         frame.add(textArea);                            // adding Texatarea into frame
 
@@ -65,15 +66,17 @@ public class TextEditior implements ActionListener {
 
         frame.setBounds(300,150,600,600);  // Define the Width x Height of Frame
 
-        JPanel panel = new JPanel();
-        panel.setBorder(new EmptyBorder(5,5,10,10));
-        panel.setLayout(new BorderLayout(0,0));
+        JPanel panel = new JPanel();                    // Create a panel to cover the TextArea
+        panel.setBorder(new EmptyBorder(5,5,10,10));    // Set the panel Border
+        panel.setLayout(new BorderLayout(0,0));        //Set the Border Layout
 
-        panel.add(textArea,BorderLayout.CENTER);
+        panel.add(textArea,BorderLayout.CENTER);        // Set the TextArea Position
 
+        //Creating a Vertical & Horizental Scroll bar as per Need
         JScrollPane scrollPane = new JScrollPane(textArea,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        panel.add(scrollPane);
-        frame.add(panel);
+        panel.add(scrollPane);         //Add the Scroll Bar into panel
+        frame.add(panel);               // Add the panel into Frame.
+        
                                      // Give the margin to frame from x or y axis
         frame.setVisible(true);     // to make frame visible
         frame.setLayout(null);      //set the layout to null
